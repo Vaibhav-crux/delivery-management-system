@@ -1,4 +1,4 @@
-<img width="895" height="240" alt="Screenshot 2025-08-23 182909" src="https://github.com/user-attachments/assets/6d8ec1ce-617d-4e05-9f0b-1ecd4bf62b0a" /># Delivery Management System
+# Delivery Management System
 
 ## Overview
 
