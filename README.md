@@ -4,8 +4,6 @@
 
 The Delivery Management System is a web application for managing logistics operations, including warehouses, agents, orders, and assignments. Built with [Quart](https://quart.palletsprojects.com/), an async Python web framework, it provides API endpoints for user authentication, warehouse management, agent check-ins, order creation, and automated order allocation. The system includes middleware for Gzip compression, rate limiting, and ASGI lifespan event handling to ensure performance and scalability.
 
-**GitHub Repository**: [https://github.com/Vaibhav-crux/delivery-management-system](https://github.com/Vaibhav-crux/delivery-management-system)
-
 Key features:
 - **Authentication**: JWT-based user signup and login.
 - **Warehouse Management**: Create, retrieve, and deactivate warehouses.
@@ -44,19 +42,6 @@ The system is tested with simulated data: 10 warehouses, 200 agents (20 per ware
 3. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
-   ```
-   The `requirements.txt` includes:
-   ```
-   quart
-   quart-cors
-   sqlalchemy
-   asyncpg
-   python-dotenv
-   bcrypt
-   pytest
-   pytest-asyncio
-   httpx
-   pytest-mock
    ```
 
 4. **Configure Environment Variables**:
