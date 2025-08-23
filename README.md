@@ -1,4 +1,4 @@
-# Delivery Management System
+<img width="895" height="240" alt="Screenshot 2025-08-23 182909" src="https://github.com/user-attachments/assets/6d8ec1ce-617d-4e05-9f0b-1ecd4bf62b0a" /># Delivery Management System
 
 ## Overview
 
@@ -205,7 +205,6 @@ The allocation logic, implemented in `app/services/allocation_service.py`, assig
 - **Rate Limiting**: In-memory storage (`defaultdict`) for testing; production may require Redis.
 - **Security**: JWT tokens (`HS256`, configurable expiration) for protected endpoints.
 - **Scheduling**: Allocation runs daily at 07:00 AM local time.
-- **Order Mismatch**: Fixed issues (e.g., order `e953af6a-faa3-44da-a309-6231d3cf289f`) by ensuring warehouse ID consistency in test data.
 
 ## Key Metrics and Outputs
 
@@ -231,28 +230,41 @@ Sample `/orders/allocate` response:
 
 ## Screenshots
 
-*Please upload the following screenshots to the README later:*
-
 1. **Server Startup Logs**
-   - Title: `Server_Startup_Logs`
-   - Description: Logs showing successful server startup with lifespan event handling.
-   - Expected Content: Logs from `python app/main.py` showing "Database connected," "Lifespan startup received," and "Running on http://127.0.0.1:5000."
+   <img width="895" height="240" alt="Screenshot 2025-08-23 182909" src="https://github.com/user-attachments/assets/38d524db-f1da-4000-b059-4236dd0e6bfe" />
 
-2. **Order Allocation Response**
-   - Title: `Order_Allocation_Response`
-   - Description: JSON response from `POST /api/v1/orders/allocate` with metrics.
-   - Expected Content: `{"message": "Order allocation completed", "assignments_created": 11500, "total_cost": 15000.0, "deferred_orders": 500}`.
+2. **APIs**
+   *Sign API*
+<img width="1067" height="463" alt="image" src="https://github.com/user-attachments/assets/558dd036-5fca-4d86-bc60-4a001d82cdff" />
 
-3. **Rate Limiting Error**
-   - Title: `Rate_Limiting_Error`
-   - Description: Response when exceeding 100 requests/minute.
-   - Expected Content: `429 Too Many Requests` with `{"error": "Rate limit exceeded"}` and `Retry-After` header.
+   *Login API*
+   <img width="1048" height="507" alt="image" src="https://github.com/user-attachments/assets/a328d189-38a0-48eb-8a2b-33ca06d64643" />
 
-4. **Test Suite Results**
-   - Title: `Test_Suite_Results`
-   - Description: Output from `pytest -v tests/test_metrics.py` showing test results.
-   - Expected Content: Console output with all tests passing.
+   *Create Warehouse*
+   <img width="1056" height="363" alt="image" src="https://github.com/user-attachments/assets/72c180a5-cb6f-434a-96dd-557059c5dbce" />
 
+   *Fetch Warehouse*
+   <img width="1064" height="382" alt="image" src="https://github.com/user-attachments/assets/788e65b4-f274-4f6d-8723-1f88c9e6fc31" />
+
+   *Create Agents*
+   <img width="1058" height="295" alt="image" src="https://github.com/user-attachments/assets/7faac195-aad1-4490-a095-084bcc982c5c" />
+
+   *Agent CheckIn*
+   <img width="1056" height="318" alt="image" src="https://github.com/user-attachments/assets/f06e0785-54df-4548-acfd-8dd10a14589f" />
+
+   *Fetch CheckIn Agents*
+   <img width="1056" height="379" alt="image" src="https://github.com/user-attachments/assets/125e0810-e55f-41ab-96fe-81c5f7240cd1" />
+
+   *Create Order*
+   <img width="1061" height="319" alt="image" src="https://github.com/user-attachments/assets/75ee9fba-ce21-4f6c-ad4e-1652a5a77b60" />
+
+   *Auto Allocate Order to Agent*
+   <img width="1060" height="445" alt="image" src="https://github.com/user-attachments/assets/500bb399-ca1d-4d36-b93e-bcb8cabef018" />
+
+   *Fetch Agent Assignment*
+   <img width="1062" height="465" alt="image" src="https://github.com/user-attachments/assets/31f35af3-3e73-4a52-9d56-09d32dac4367" />
+
+   
 ## Project Structure
 
 ```
